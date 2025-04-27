@@ -4,7 +4,8 @@ EMAIL varchar(50)	MASKED WITH (function = 'email()'),
 NEV varchar(50) MASKED WITH (FUNCTION = 'partial(1,"XXX",1)'),
 SZULEV INT MASKED WITH (FUNCTION = 'random(1920,2025)'),
 NEM varchar(1),
-CIM VARCHAR(50) MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)'))
+CIM VARCHAR(50) MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)'),
+PRIMARY KEY([LOGIN]))
 
 INSERT INTO Ugyfel_masked ([LOGIN], EMAIL, NEV, SZULEV, NEM, CIM) VALUES
 ('Asanka1', 'dineshasanka@gmail.com', 'Asanka Badama', '1989', 'F', '1212 Budapest, Ady Endre út 3'),
